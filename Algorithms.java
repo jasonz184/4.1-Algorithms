@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -7,14 +8,14 @@ public class Algorithms {
     private static Scanner s;
     public static void main(String[] args) throws FileNotFoundException {
         f = new File("Numbers.txt");
-        System.out.println("Odds: " + odds());
-        System.out.println("Evens: " + evens());
-        System.out.println("Two digit numbers: " + twoDigit());
-        System.out.println("Numbers greater than 500: " + fiveHundred());
-        System.out.println("Greatest number: " + greatest());
-        System.out.println("Least number: " + least());
-        System.out.println("Sum of all numbers: " + sum());
-        System.out.println("Mean of all numbers: " + mean());
+        //System.out.println("Odds: " + odds());
+        //System.out.println("Evens: " + evens());
+        //System.out.println("Two digit numbers: " + twoDigit());
+        //System.out.println("Numbers greater than 500: " + fiveHundred());
+        //System.out.println("Greatest number: " + greatest());
+        //System.out.println("Least number: " + least());
+        //System.out.println("Sum of all numbers: " + sum());
+        //System.out.println("Mean of all numbers: " + mean());
         System.out.println(mode());
         s.close();
     }
@@ -101,6 +102,27 @@ public class Algorithms {
 
     public static int mode() throws FileNotFoundException{
         s = new Scanner(f);
-        
+        ArrayList<Integer> numbers = new ArrayList<>();
+        int tempCommon = 0;
+        int common = 0;
+        int tempAmount = 0;
+        int amount = 0;
+        while(s.hasNext()) {
+            numbers.add(s.nextInt());
+        }
+        while(tempCommon < 999) {
+            tempAmount = 0;
+            for(int i = 0; i < numbers.size(); i++) {
+                if(numbers.get(i) == tempCommon) {
+                    tempAmount++;
+                }
+                if(tempAmount > amount) {
+                    amount = tempAmount;
+                    common = tempCommon;
+                }
+            }
+            tempCommon++;
+        }
+        return common;
     }
 }
