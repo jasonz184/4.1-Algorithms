@@ -8,15 +8,15 @@ public class Algorithms {
     private static Scanner s;
     public static void main(String[] args) throws FileNotFoundException {
         f = new File("Numbers.txt");
-        //System.out.println("Odds: " + odds());
-        //System.out.println("Evens: " + evens());
-        //System.out.println("Two digit numbers: " + twoDigit());
-        //System.out.println("Numbers greater than 500: " + fiveHundred());
-        //System.out.println("Greatest number: " + greatest());
-        //System.out.println("Least number: " + least());
-        //System.out.println("Sum of all numbers: " + sum());
-        //System.out.println("Mean of all numbers: " + mean());
-        System.out.println(mode());
+        System.out.println("Odds: " + odds());
+        System.out.println("Evens: " + evens());
+        System.out.println("Two digit numbers: " + twoDigit());
+        System.out.println("Numbers greater than 500: " + fiveHundred());
+        System.out.println("Greatest number: " + greatest());
+        System.out.println("Least number: " + least());
+        System.out.println("Sum of all numbers: " + sum());
+        System.out.println("Mean of all numbers: " + mean());
+        System.out.println("The number that appears the most is " + mode());
         s.close();
     }
 
