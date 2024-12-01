@@ -16,7 +16,7 @@ public class Algorithms {
         System.out.println("Least number: " + least());
         System.out.println("Sum of all numbers: " + sum());
         System.out.println("Mean of all numbers: " + mean());
-        System.out.println("The number that appears the most is " + mode());
+        System.out.println("Mode: " + mode());
         s.close();
     }
 
